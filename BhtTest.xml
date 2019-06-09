@@ -1,0 +1,8 @@
+
+<suite name="Suite">
+  <test name="HomeWork">
+    <classes>
+      <class name="com.Practice.BhtTest"/>
+    </classes>
+  </test> 
+</suite> 
