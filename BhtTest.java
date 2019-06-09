@@ -75,7 +75,7 @@ public class BhtTest extends CommonMethods {
 	}
 
 	@Test(priority = 1,dataProvider="userOneData")
-	public void creatingUserOne(String product,String quantiti,String firstName,String address,String city,String state,String zip,String creditcard,String expiration,String cardType) {
+	public void creatingUserOne(String product,String quantiti,String firstName,String address,String city,String state,String zip,String ccCard,String ccExp,String ccType) {
 
 		click(driver.findElement(By.linkText("Order")));
 		
@@ -89,10 +89,10 @@ public class BhtTest extends CommonMethods {
 		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox4")), state);
 		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox5")),zip);
 
-		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6")), creditcard);
-		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1")), expiration);
+		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox6")), ccCard);
+		sendText(driver.findElement(By.id("ctl00_MainContent_fmwOrder_TextBox1")), ccExp);
 		List <WebElement> radio=driver.findElements(By.xpath("//input[@type='radio']"));
-		 radioButtonComparingValue(radio, cardType);
+		 radioButtonComparingValue(radio, ccType);
 		click(driver.findElement(By.linkText("Process")));
 
 	}
